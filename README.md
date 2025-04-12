@@ -137,29 +137,29 @@ Enter the Parity bits : 3
 Enter the Message bits : 3
 Enter the row values : 1 (Separated by space) : 1 0 0
 Enter the row values : 2 (Separated by space) : 1 0 1
-Enter the row values : 3 (Separated by space) : 1 1 1
+Enter the row values : 3 (Separated by space) : 1 1 0
 **********
 The Generator Matrix is: 
 1 0 0 1 0 0
 1 0 1 0 1 0
-1 1 1 0 0 1
+1 1 0 0 0 1
 **********
-Message Bits  Codeword   Hamming Weight
-0 0 0	0 0 0 0 0 0	0
-0 0 1	1 1 1 0 0 1	4
-0 1 0	1 0 1 0 1 0	3
-0 1 1	0 1 0 0 1 1	3
-1 0 0	1 0 0 1 0 0	2
-1 0 1	0 1 1 1 0 1	4
-1 1 0	0 0 1 1 1 0	3
-1 1 1	1 1 0 1 1 1	5
+Message Bits   Codeword     Hamming Weight
+0 0 0		0 0 0 0 0 0		0
+0 0 1		1 1 0 0 0 1		3
+0 1 0		1 0 1 0 1 0		3
+0 1 1		0 1 1 0 1 1		4
+1 0 0		1 0 0 1 0 0		2
+1 0 1		0 1 0 1 0 1		3
+1 1 0		0 0 1 1 1 0		3
+1 1 1		1 1 1 1 1 1		6
 **********
 Minimum Hamming distance : 2
 **********
 Parity Check Matrix
 1 0 0 1 1 1
 0 1 0 0 0 1
-0 0 1 0 1 1
+0 0 1 0 1 0
 **********
 Parity Check Matrix Transpose
 0 0 0
@@ -168,8 +168,8 @@ Parity Check Matrix Transpose
 0 0 1
 1 0 0
 1 0 1
-1 1 1
-Enter the error codeword : 0 0 1 0 0 0
+1 1 0
+Enter the error codeword : 1 1 0 1 1 1
 The error postion is : 0 0 1 0 0 0
 The size is : 7
 **********
@@ -180,12 +180,16 @@ Syndrome Matrix
 0 0 1	0 0 0 1 0 0 0
 1 0 0	0 0 0 0 1 0 0
 1 0 1	0 0 0 0 0 1 0
-1 1 1	0 0 0 0 0 0 1
+1 1 0	0 0 0 0 0 0 1
 **********
 Syndeome of given received codeword is : 0 0 1
-The correct codeword is : 0 0 0 0 0 0
+The correct codeword is : 1 1 1 1 1 1
 
 ```
+## Calculation:
+![page1](https://github.com/user-attachments/assets/08c3413a-f996-42b7-9630-5189a1590b9b)
+![page2](https://github.com/user-attachments/assets/c7ecc1be-6d38-4375-bc32-1604dfe13d57)
+
 
 ## Results:
 The Linear Block Code was successfully implemented. Codewords were generated, and errors in received codewords were detected and corrected using the syndrome decoding method.
